@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "3eefcf03-182e-4a41-a4fe-6262b61e8875",
+		"name": "News And Weather Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Naveed\",\r\n    \"lastName\": \"Sayyed\",\r\n    \"email\":\"bikidiki108@gmail.com\",\r\n    \"password\": \"helo@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				},
+				"description": "http://localhost:3000/user/sign-up"
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"bikidiki108@gmail.com\",\r\n    \"password\": \"helo@1234\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"login"
+					]
+				},
+				"description": "http://localhost:3000/user/login"
+			},
+			"response": []
+		},
+		{
+			"name": "News Search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGVjM2U2MzhlODM2MzRkM2M3MTNjNmEiLCJpYXQiOjE2MjYxNjM0Njl9.k1hW8f628mH-eh-RxRTYkVkYAlUzNHJXGZXv7aGIOxA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/news?q=bitcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "bitcoin"
+						}
+					]
+				},
+				"description": "http://localhost:3000/news?q=bitcoin"
+			},
+			"response": []
+		},
+		{
+			"name": "Weather Search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/weather?q=Bangalore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Bangalore"
+						}
+					]
+				},
+				"description": "http://localhost:3000/weather?q=Bangalore"
+			},
+			"response": []
+		}
+	]
+}
