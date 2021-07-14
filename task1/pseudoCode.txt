@@ -1,0 +1,8 @@
+Steps:
+
+1. Check for array's length. if less or equal to 1 return array else continue to 2.
+2. calculate the mid index value of the array.
+3. divide the array into left and right based on mid and repeat steps 1,2,3 
+   till left_Array.length = 1 and right_Array.length =1
+4. call sortingFxn and pass left and right as parameters
+5. In sortingFxn, compare the two array values and store the smaller one first and then the bigger one in results array

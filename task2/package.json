@@ -1,0 +1,23 @@
+{
+  "name": "newsandweatherapp",
+  "version": "1.0.0",
+  "description": "This app consolidates news and weather information of the day and presents it to the user",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Naveed Sayyed",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.10",
+    "mongoose": "^5.13.2"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.12"
+  }
+}
