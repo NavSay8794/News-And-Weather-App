@@ -8,9 +8,7 @@ const authenticate = async (req,res,next)=>{
     
     const token = req.headers.authorization.split(' ')[1]
     let verify = await jwt.verify(token, process.env.SECRET)
-    
     const result = await User.find({_id: verify._id})
-    console.log(result)
     if(result){
         next()
     }else{
